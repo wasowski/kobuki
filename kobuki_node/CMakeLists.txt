@@ -3,7 +3,7 @@ project(kobuki_node)
 find_package(catkin REQUIRED COMPONENTS rospy roscpp nodelet pluginlib tf angles
                                         geometry_msgs sensor_msgs nav_msgs std_msgs diagnostic_updater diagnostic_msgs
                                         kobuki_msgs kobuki_driver kobuki_keyop kobuki_safety_controller
-                                        ecl_exceptions ecl_sigslots ecl_streams ecl_threads)
+                                        ecl_exceptions ecl_sigslots ecl_streams ecl_threads haros)
 
 catkin_package(
    INCLUDE_DIRS include
@@ -37,3 +37,5 @@ install(PROGRAMS scripts/getOdom2D.py
                  scripts/getYaw.py
         DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+haros_report()
